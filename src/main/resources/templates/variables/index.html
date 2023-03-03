@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<p>
+		Enviando parametros por url <br> ejemplo de la url
+		http://localhost:8080/variable/string/$valor
+	</p>
+
+	<ul>
+		<li><a th:href="@{/variables/string/} + 'hola puto'">probando </a> </li>
+		<li><a th:href="@{/variables/string/} + ${'hola puto'} + '/' + ${'7'}">probando </a> </li>
+	</ul>
+
+
+
+</body>
+</html>
